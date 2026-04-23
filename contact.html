@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Команда — Elemental Fae</title>
+    <style>
+        @font-face { font-family: 'Cinzel'; src: url('fonts/Cinzel/Cinzel-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; }
+        @font-face { font-family: 'Raleway'; src: url('fonts/Raleway/Raleway-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; }
+        @font-face { font-family: 'Raleway'; src: url('fonts/Raleway/Raleway-SemiBold.ttf') format('truetype'); font-weight: 600; font-style: normal; }
+        @font-face { font-family: 'Playfair Display'; src: url('fonts/Playfair_Display/PlayfairDisplay-Italic.ttf') format('truetype'); font-weight: 400; font-style: italic; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #0a0a12; color: #e0d7ff; font-family: 'Raleway', sans-serif; overflow-x: hidden; background-image: radial-gradient(ellipse at 20% 20%, rgba(120, 40, 200, 0.15) 0%, transparent 50%), radial-gradient(ellipse at 80% 60%, rgba(0, 200, 200, 0.1) 0%, transparent 50%), radial-gradient(ellipse at 50% 90%, rgba(255, 100, 50, 0.1) 0%, transparent 50%); background-attachment: fixed; }
+        #particles-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+        .container { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .navbar { position: fixed; top: 0; left: 0; width: 100%; background: rgba(10, 10, 18, 0.7); backdrop-filter: blur(12px); z-index: 100; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 15px 0; }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-family: 'Cinzel', serif; font-weight: 700; font-size: 1.5rem; color: #f3e8ff; text-decoration: none; }
+        .nav-links a { color: #c9b8f9; margin-left: 25px; text-decoration: none; font-weight: 500; } .nav-links a:hover { color: #f1c40f; }
+        .section { padding: 100px 0 60px; }
+        .section-title { font-family: 'Cinzel', serif; font-size: 2.5rem; font-weight: 700; margin-bottom: 50px; text-align: center; color: #f3e8ff; }
+        .glass-card { background: rgba(20, 15, 35, 0.5); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 28px; padding: 40px; margin-bottom: 30px; }
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 30px; margin-top: 20px; }
+        .team-card { text-align: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); }
+        .team-card .avatar { font-size: 3rem; margin-bottom: 10px; }
+        .team-card h4 { font-family: 'Cinzel', serif; color: #fff; }
+        .team-card p { color: #b8acd4; font-size: 0.9rem; }
+        .contact-links { display: flex; gap: 20px; justify-content: center; margin-top: 30px; }
+        .contact-links a { color: #f1c40f; font-family: 'Cinzel', serif; }
+        footer { text-align: center; padding: 60px 20px; color: #6c648b; }
+    </style>
+</head>
+<body>
+    <canvas id="particles-canvas"></canvas>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">✨ Elemental Fae</a>
+            <div class="nav-links">
+                <a href="index.html">Концепция</a>
+                <a href="zones.html">Зоны</a>
+                <a href="gamedesign.html">Геймдизайн</a>
+                <a href="business.html">Бизнес</a>
+                <a href="risks.html">Риски</a>
+                <a href="roadmap.html">Roadmap</a>
+                <a href="about.html">О проекте</a>
+                <a href="contact.html">Команда</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container" style="padding-top: 100px;">
+        <div class="section">
+            <h2 class="section-title">Кто стоит за магией</h2>
+            <div class="glass-card">
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="avatar">🧙‍♂️</div>
+                        <h4>Ты</h4>
+                        <p>Автор идеи, геймдизайнер</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="avatar">🧚</div>
+                        <h4>Твой брат</h4>
+                        <p>Главный тестировщик и вдохновитель</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="avatar">💻</div>
+                        <h4>В поиске</h4>
+                        <p>Unity-разработчик</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="avatar">☁️</div>
+                        <h4>В поиске</h4>
+                        <p>Бэкенд-разработчик (Yandex Cloud)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="glass-card" style="text-align:center;">
+                <div class="card-title">Связь с нами</div>
+                <p style="color:#b8acd4;">Пока проект на стадии идеи, но мы открыты к предложениям и партнёрству.</p>
+                <div class="contact-links">
+                    <a href="https://github.com/hronskor-hue/Elemental-Fae" target="_blank">🌟 GitHub проекта</a>
+                    <span style="color:#6c648b;">|</span>
+                    <span>📧 elemental-fae@magic.world (скоро)</span>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>Elemental Fae: Wild Realms — присоединяйся к команде мечты.</p>
+            <p>© 2025 магия вне Хогвартса</p>
+        </footer>
+    </div>
+    <script>
+        (function() {
+            const canvas = document.getElementById('particles-canvas');
+            const ctx = canvas.getContext('2d');
+            let width, height, particles = [];
+            function resize() { width = window.innerWidth; height = window.innerHeight; canvas.width = width; canvas.height = height; }
+            window.addEventListener('resize', resize); resize();
+            class Particle {
+                constructor() { this.reset(); }
+                reset() { this.x = Math.random()*width; this.y = Math.random()*height; this.size = Math.random()*2.5+0.8; this.speedX = (Math.random()-0.5)*0.5; this.speedY = (Math.random()-0.5)*0.5; this.opacity = Math.random()*0.6+0.2; this.color = `rgba(180,140,255,${this.opacity})`; if(Math.random()<0.3) this.color=`rgba(255,200,100,${this.opacity})`; if(Math.random()<0.2) this.color=`rgba(100,210,255,${this.opacity})`; }
+                update() { this.x+=this.speedX; this.y+=this.speedY; if(this.x<-10)this.x=width+10; if(this.x>width+10)this.x=-10; if(this.y<-10)this.y=height+10; if(this.y>height+10)this.y=-10; }
+                draw() { ctx.beginPath(); ctx.arc(this.x,this.y,this.size,0,Math.PI*2); ctx.fillStyle=this.color; ctx.fill(); }
+            }
+            for(let i=0;i<80;i++) particles.push(new Particle());
+            function animate() {
+                ctx.clearRect(0,0,width,height);
+                particles.forEach(p => { p.update(); p.draw(); });
+                for(let i=0;i<particles.length;i++){ for(let j=i+1;j<particles.length;j++){ const dx=particles[i].x-particles[j].x, dy=particles[i].y-particles[j].y; const dist=Math.sqrt(dx*dx+dy*dy); if(dist<120){ ctx.beginPath(); ctx.moveTo(particles[i].x,particles[i].y); ctx.lineTo(particles[j].x,particles[j].y); ctx.strokeStyle=`rgba(150,120,220,${0.08*(1-dist/120)})`; ctx.lineWidth=0.5; ctx.stroke(); } } }
+                requestAnimationFrame(animate);
+            }
+            animate();
+        })();
+    </script>
+</body>
+</html>
